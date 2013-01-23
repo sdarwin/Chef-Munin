@@ -1,3 +1,15 @@
+Branched from Opscode Munin recipe 1.1.2.
+
+Changes:
+- Not using opscode's apache code, which is more heavy weight than desired.
+- Changed location of ubuntu docroot to match the actual path.  :-)
+
+Todo:
+- Observe on RH and Ubuntu, and change /etc/munin/apache.conf to remove those permission.  More open to begin with.
+	In other words, probably create a chef template and drop it into place.
+- Todo right now, check on private/public IP's for both clients and servers, and make sure they are accounted for.
+
+
 Description
 ===========
 
