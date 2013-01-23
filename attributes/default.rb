@@ -46,7 +46,7 @@ when "freebsd"
 when "ubuntu", "debian"
   default['munin']['basedir'] = "/etc/munin"
   default['munin']['plugin_dir'] = "/usr/share/munin/plugins"
-  default['munin']['docroot'] = "/var/cache/www/munin"
+  default['munin']['docroot'] = "/var/cache/munin/www"
   default['munin']['dbdir'] = "/var/lib/munin"
   default['munin']['root']['group'] = "root"
 else

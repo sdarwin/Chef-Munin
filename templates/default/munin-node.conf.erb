@@ -38,6 +38,10 @@ host_name <%= node[:hostname] %>.ec2.internal
 
 <% @munin_servers.sort.each do |server| -%>
 allow ^<%= server[:ipaddress].to_s.gsub(/\./, '\.') %>$
+<% if server['cloud']['public_ipv4'] %>
+allow ^<%= server['cloud']['public_ipv4'].to_s.gsub(/\./, '\.') %>$
+<% end %>
+
 <% end -%>
 allow ^127\.0\.0\.1$
 
