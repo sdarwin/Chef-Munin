@@ -31,7 +31,10 @@ max_cgi_graph_jobs <%= node['munin']['max_cgi_graph_jobs'] %>
     ip = system['cloud']['public_ipv4']
   elsif !node['cloud'].nil? && system['cloud']['provider'] != node['cloud']['provider']
     ip = system['cloud']['public_ipv4']
-  else
+       #S.D. 2013, 2 lines
+  elsif !node['cloud'].nil? && system['ec2']['placement_availability_zone'][0..5] != node['ec2']['placement_availability_zone'][0..5]
+    ip = system['cloud']['public_ipv4']
+else
     ip = system['ipaddress']
   end %>
   address <%= ip %>
