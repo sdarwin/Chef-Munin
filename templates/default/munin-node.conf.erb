@@ -3,7 +3,12 @@
 ###
 
 log_level 4
+#at least centos 6.3
+<% if  node['platform_family'] == "rhel" -%>
+log_file /var/log/munin-node/munin-node.log
+<% else -%>
 log_file /var/log/munin/munin-node.log
+<% end -%>
 port 4949
 pid_file /var/run/munin/munin-node.pid
 background 1

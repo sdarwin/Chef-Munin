@@ -40,3 +40,39 @@ when "arch"
     notifies :restart, "service[munin-node]"
   end
 end
+
+if platform_family?("rhel")
+munin_plugin "apache_accesses"
+munin_plugin "apache_volume"
+munin_plugin "cpu"
+munin_plugin "df"
+munin_plugin "df_inode"
+munin_plugin "diskstats"
+munin_plugin "entropy"
+munin_plugin "forks"
+munin_plugin "fw_packets"
+munin_plugin "http_loadtime"
+munin_plugin "if_err_" do
+  plugin "if_err_eth0"
+end
+munin_plugin "if_" do
+  plugin "if_eth0"
+end
+munin_plugin "interrupts"
+munin_plugin "iostat"
+munin_plugin "iostat_ios"
+munin_plugin "irqstats"
+munin_plugin "load"
+munin_plugin "memory"
+munin_plugin "open_files"
+munin_plugin "open_inodes"
+munin_plugin "postfix_mailqueue"
+munin_plugin "postfix_mailvolume"
+munin_plugin "processes"
+munin_plugin "proc_pri"
+munin_plugin "swap"
+munin_plugin "threads"
+munin_plugin "uptime"
+munin_plugin "vmstat"
+end
+
