@@ -1,5 +1,5 @@
-Branched from Opscode Munin recipe 1.1.2.
-hhhhhh
+Branched from Opscode Munin recipe 1.1.2.  
+
 Changes:
 - Not using opscode's apache code, which is more heavy weight than desired.
 - Changed location of ubuntu docroot to match the actual path.  :-)
