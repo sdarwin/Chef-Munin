@@ -1,4 +1,6 @@
-Branched from Opscode Munin recipe 1.1.2.  
+A clone from Opscode Munin recipe 1.1.2 in 2013.  No longer supported. Refer to Chef Supermarket.
+
+----
 
 Changes:
 - Not using opscode's apache code, which is more heavy weight than desired.
